@@ -32,9 +32,9 @@ export const PHONE_HREF = "tel:+18477490514";
 export const ADDRESS_LINES = ["1642 W. Colonial Parkway", "Inverness, IL 60067"] as const;
 export const ADDRESS_NOTE = "Across from Harper College in Palatine";
 export const MAPS_URL =
-  "https://www.google.com/maps/search/?api=1&query=1642+W+Colonial+Pkwy+Inverness+IL+60067";
+  "https://maps.app.goo.gl/MYgTZaYTg43crWpy8";
 export const MAPS_EMBED_URL =
-  "https://www.google.com/maps?q=1642+W+Colonial+Pkwy,+Inverness,+IL+60067&output=embed";
+  "https://www.google.com/maps?q=42.0826534,-88.0795377&z=17&output=embed";
 
 export const WEBSITE_URL = "https://www.clinicalcareconsultants.com/";
 export const WEBSITE_LABEL = "ClinicalCareConsultants.com";
