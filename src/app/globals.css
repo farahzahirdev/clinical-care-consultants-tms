@@ -4426,3 +4426,35 @@ h2,
     aspect-ratio: 16 / 9;
   }
 }
+
+/* ---------- Hero: curve flows into the marquee strip, both inside the hero ---------- */
+
+.hero-base {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-base .hero-curve {
+  position: static;
+  display: block;
+  margin-bottom: -1px;
+}
+
+.hero-strip-wrap {
+  padding-block: 0 clamp(1.25rem, 1rem + 1.5vw, 2.25rem);
+}
+
+/* Hero strip: deep forest band so the bright green stays reserved for the buttons */
+.hero-base .hero-curve {
+  height: clamp(26px, 3.2vw, 50px);
+}
+
+.hero .marquee {
+  background: var(--forest);
+  color: #fff;
+  padding-block: 0.55rem 0.95rem;
+}
+
+.hero .marquee-leaf {
+  background: var(--leaf-light);
+}

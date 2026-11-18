@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { CallButton, QualifyButton } from "@/components/CTAButtons";
+import Marquee from "@/components/Marquee";
 import {
   CheckIcon,
   HeartIcon,
@@ -145,7 +146,8 @@ export default function Hero() {
         </ul>
       </div>
 
-      {/* Soft curve into the next section */}
+      {/* Soft curve into the marquee strip that closes the hero */}
+      <div className="hero-base">
       <svg className="hero-curve" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden>
         <defs>
           <linearGradient id="curve-leaf" x1="0" x2="1" y1="0" y2="0">
@@ -156,7 +158,7 @@ export default function Hero() {
             <stop offset="100%" stopColor="#4a7f1f" />
           </linearGradient>
         </defs>
-        <path d="M0 64V34C240 6 480 0 720 10s480 34 720 24v30H0Z" fill="#fff" />
+        <path d="M0 64V34C240 6 480 0 720 10s480 34 720 24v30H0Z" fill="#3c7218" />
         <g className="curve-draw" fill="none" stroke="url(#curve-leaf)">
           <path
             d="M0 26C240 -2 480 -8 720 2s480 34 720 24"
@@ -171,6 +173,8 @@ export default function Hero() {
           />
         </g>
       </svg>
+      <Marquee />
+      </div>
     </section>
     </>
   );
