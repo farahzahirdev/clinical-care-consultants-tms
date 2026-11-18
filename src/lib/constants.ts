@@ -6,7 +6,7 @@ export const LOGO_URL = "/images/logo.png";
 export const LOGO_MARK_URL = "/images/logo-mark.png";
 
 export const HERO_IMAGE = "/images/hero-portrait.webp";
-export const FINAL_IMAGE = "/images/sea-breeze.webp";
+export const FINAL_IMAGE = "/images/sea-breeze-green.webp";
 export const TMS_IMAGE = "/images/ampa-tms-system.webp";
 export const WHY_IMAGE = "/images/self-discovery.webp";
 export const HERO_IMAGE_ALT = "Woman relaxing comfortably in a bright, calm room";

@@ -4234,3 +4234,195 @@ h2,
     );
   }
 }
+
+/* ---------- Hero: wave curve into the next section ---------- */
+
+.hero {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: linear-gradient(180deg, #fff 0%, var(--cream) 45%, #e7f4d9 100%);
+}
+
+.hero-inner {
+  padding-bottom: calc(clamp(2.5rem, 2rem + 2.5vw, 4.5rem) + clamp(36px, 4.5vw, 72px));
+}
+
+.hero-curve {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  width: 100%;
+  height: clamp(36px, 4.5vw, 72px);
+  overflow: visible;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.curve-draw {
+  clip-path: inset(-20px 100% -20px 0);
+  animation: curve-draw 2.2s var(--ease) 0.6s forwards;
+}
+
+@keyframes curve-draw {
+  to {
+    clip-path: inset(-20px 0 -20px 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curve-draw {
+    clip-path: none;
+    animation: none;
+  }
+}
+
+.hero-strip-wrap {
+  margin-top: clamp(1.25rem, 1rem + 1.5vw, 2.25rem);
+}
+
+/* ---------- Final call to action: two columns, text and photo ---------- */
+
+.final-split {
+  display: grid;
+  overflow: hidden;
+  border-radius: 32px;
+  border: 1px solid rgba(121, 192, 64, 0.35);
+  background: linear-gradient(135deg, #f4faec 0%, #e6f4d7 100%);
+  box-shadow: var(--shadow-lift);
+}
+
+.final-copy {
+  order: 2;
+  padding: clamp(1.75rem, 1.25rem + 3vw, 4rem);
+  text-align: center;
+}
+
+.final-copy h2 {
+  color: var(--ink);
+  margin-block: 0.35rem 1rem;
+}
+
+.final-copy .lead {
+  color: var(--muted);
+  margin-inline: auto;
+}
+
+.final-copy .final-actions {
+  justify-content: center;
+}
+
+.final-media {
+  order: 1;
+  position: relative;
+  aspect-ratio: 16 / 11;
+}
+
+.final-media img {
+  object-fit: cover;
+  object-position: 50% 28%;
+}
+
+@media (min-width: 900px) {
+  .final-split {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: stretch;
+  }
+
+  .final-copy {
+    order: 1;
+    align-self: center;
+    text-align: left;
+  }
+
+  .final-copy .lead {
+    margin-inline: 0;
+  }
+
+  .final-copy .final-actions {
+    justify-content: flex-start;
+  }
+
+  .final-media {
+    order: 2;
+    aspect-ratio: auto;
+    min-height: 440px;
+  }
+}
+
+/* ---------- Hero: facts strip sits inside the hero, above the curve ---------- */
+
+.hero-inner {
+  padding-bottom: clamp(2rem, 1.5rem + 2vw, 3.25rem);
+}
+
+.hero-strip-wrap {
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+  padding-block: 0 calc(clamp(36px, 4.5vw, 72px) + clamp(1.5rem, 1rem + 1.5vw, 2.5rem));
+}
+
+/* ---------- Final card: photo in the theme's leaf frame, graded to the green palette ---------- */
+
+.final-media {
+  aspect-ratio: auto;
+  padding: clamp(1.25rem, 1rem + 1.5vw, 2rem) clamp(1.25rem, 1rem + 1.5vw, 2rem) 0;
+}
+
+.final-media-frame {
+  position: relative;
+  z-index: 1;
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+  border-radius: 110px 24px 110px 24px;
+  box-shadow: 0 24px 50px -24px rgba(38, 77, 16, 0.45);
+}
+
+.final-media-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(200deg, rgba(168, 219, 124, 0.16), rgba(60, 114, 24, 0.12));
+  pointer-events: none;
+}
+
+.final-media-outline {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .final-media {
+    min-height: 0;
+    display: grid;
+    align-items: center;
+    padding: clamp(1.75rem, 1rem + 2vw, 2.75rem);
+    padding-left: 0;
+  }
+
+  .final-media-frame {
+    aspect-ratio: 1 / 1;
+    max-height: 420px;
+    width: 100%;
+    border-radius: 150px 26px 150px 26px;
+  }
+
+  .final-media-outline {
+    display: block;
+    position: absolute;
+    inset: clamp(1.75rem, 1rem + 2vw, 2.75rem);
+    left: -14px;
+    transform: translate(14px, 14px);
+    border: 2px solid var(--leaf);
+    border-radius: 150px 26px 150px 26px;
+    opacity: 0.55;
+    max-height: 420px;
+    margin-block: auto;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .final-media-frame {
+    aspect-ratio: 16 / 9;
+  }
+}

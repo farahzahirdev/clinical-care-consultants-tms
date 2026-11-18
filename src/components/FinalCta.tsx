@@ -6,7 +6,6 @@ import {
   ADDRESS_LINES,
   ADDRESS_NOTE,
   FINAL_IMAGE,
-  LOGO_MARK_URL,
   MAPS_EMBED_URL,
   MAPS_URL,
   PHONE_HREF,
@@ -21,28 +20,30 @@ export default function FinalCta() {
     <section className="section final">
       <div className="wrap">
         <Reveal className="zoom">
-          <div className="final-card">
-            <Image src={FINAL_IMAGE} alt="" fill quality={90} sizes="(max-width: 899px) 100vw, 700px" className="final-photo" aria-hidden />
-            <span className="final-shade" aria-hidden />
-            <span className="orb orb-1" aria-hidden />
-            <Image
-              src={LOGO_MARK_URL}
-              alt=""
-              width={299}
-              height={315}
-              unoptimized
-              className="final-leaf"
-              aria-hidden
-            />
-            <p className="script final-script">{TAGLINE}</p>
-            <h2>Relief may be closer than it feels today</h2>
-            <p className="lead">
-              Take two minutes to see whether TMS could be right for you, or call and talk with
-              our welcoming office staff.
-            </p>
-            <div className="final-actions">
-              <QualifyButton className="btn-glow" />
-              <CallButton variant="forest" />
+          <div className="final-split">
+            <div className="final-copy">
+              <p className="script final-script">{TAGLINE}</p>
+              <h2>Relief may be closer than it feels today</h2>
+              <p className="lead">
+                Take two minutes to see whether TMS could be right for you, or call and talk with
+                our welcoming office staff.
+              </p>
+              <div className="final-actions">
+                <QualifyButton className="btn-glow" />
+                <CallButton variant="forest" />
+              </div>
+            </div>
+            <div className="final-media">
+              <span className="final-media-outline" aria-hidden />
+              <div className="final-media-frame">
+              <Image
+                src={FINAL_IMAGE}
+                alt="A woman with her arms raised, smiling in the sea breeze"
+                fill
+                quality={90}
+                sizes="(max-width: 899px) 92vw, 600px"
+              />
+              </div>
             </div>
           </div>
         </Reveal>

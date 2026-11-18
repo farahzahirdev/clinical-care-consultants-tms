@@ -125,7 +125,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
 
       <div className="wrap hero-strip-wrap">
         <ul className="hero-strip rise rise-8">
@@ -146,6 +145,33 @@ export default function Hero() {
         </ul>
       </div>
 
+      {/* Soft curve into the next section */}
+      <svg className="hero-curve" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden>
+        <defs>
+          <linearGradient id="curve-leaf" x1="0" x2="1" y1="0" y2="0">
+            <stop offset="0%" stopColor="#4a7f1f" />
+            <stop offset="30%" stopColor="#a8db7c" />
+            <stop offset="55%" stopColor="#79c040" />
+            <stop offset="80%" stopColor="#c5e8a4" />
+            <stop offset="100%" stopColor="#4a7f1f" />
+          </linearGradient>
+        </defs>
+        <path d="M0 64V34C240 6 480 0 720 10s480 34 720 24v30H0Z" fill="#fff" />
+        <g className="curve-draw" fill="none" stroke="url(#curve-leaf)">
+          <path
+            d="M0 26C240 -2 480 -8 720 2s480 34 720 24"
+            strokeOpacity="0.55"
+            strokeWidth="1"
+            vectorEffect="non-scaling-stroke"
+          />
+          <path
+            d="M0 34C240 6 480 0 720 10s480 34 720 24"
+            strokeWidth="2.5"
+            vectorEffect="non-scaling-stroke"
+          />
+        </g>
+      </svg>
+    </section>
     </>
   );
 }
