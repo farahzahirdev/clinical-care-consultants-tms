@@ -20,7 +20,6 @@ Follows [clinicalcareconsultants.com](https://www.clinicalcareconsultants.com/) 
 
 ## Before launch
 
-- Replace `PHONE_NUMBER` / `PHONE_HREF` in `src/lib/constants.ts` with the Twilio tracking number (clinic main line is the placeholder).
 - Confirm conditions and insurance details to feature for TMS. The page makes no plan-specific claims, and only describes TMS for depression.
 - Confirm how the AMPA device should be named in copy (`DEVICE_NAME`).
 

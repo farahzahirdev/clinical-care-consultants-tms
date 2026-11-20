@@ -22,12 +22,13 @@ export const FORM_IFRAME_ID = "inline-wnaOstwjn9uOhLYwdYXh";
 export const FORM_NAME = "TMS: New Web Inquiry + Params";
 export const FORM_HEIGHT = "2082";
 
-/**
- * TODO before launch: replace with the Twilio tracking number.
- * The brief did not include it, so the clinic's main line is used for now.
- */
-export const PHONE_NUMBER = "(847) 749-0514";
-export const PHONE_HREF = "tel:+18477490514";
+export const PHONE_NUMBER = "(847) 393-9365";
+export const PHONE_HREF = "tel:+18473939365";
+
+export const BUSINESS_HOURS = [
+  { days: "Monday to Friday", hours: "9am to 5pm" },
+  { days: "Saturday and Sunday", hours: "Closed" },
+] as const;
 
 export const ADDRESS_LINES = ["1642 W. Colonial Parkway", "Inverness, IL 60067"] as const;
 export const ADDRESS_NOTE = "Across from Harper College in Palatine";
@@ -111,7 +112,7 @@ export const STEPS = [
   {
     title: "Begin treatment",
     description:
-      "Short weekday sessions over several weeks, with a team that checks in along the way.",
+      "Short weekday sessions over several weeks, or our one-day AMPA TMS protocol, where treatment can be completed in a single day. Our team checks in along the way.",
   },
 ] as const;
 
@@ -194,7 +195,7 @@ export const FAQ_ITEMS = [
   {
     question: "How long does treatment take?",
     answer:
-      "A course of TMS usually means short weekday visits over several weeks. Your clinician will explain the schedule that fits your treatment plan before you begin.",
+      "A course of TMS usually means short weekday visits over several weeks. We also offer a one-day AMPA TMS protocol, where treatment can be completed in a single day. Your clinician will explain the schedule that fits your treatment plan before you begin.",
   },
   {
     question: "Will insurance cover TMS?",

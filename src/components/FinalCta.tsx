@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { CallButton, QualifyButton } from "@/components/CTAButtons";
-import { PhoneIcon, PinIcon } from "@/components/Icons";
+import { ClockIcon, PhoneIcon, PinIcon } from "@/components/Icons";
 import {
   ADDRESS_LINES,
   ADDRESS_NOTE,
+  BUSINESS_HOURS,
   FINAL_IMAGE,
   MAPS_EMBED_URL,
   MAPS_URL,
@@ -76,6 +77,19 @@ export default function FinalCta() {
                   <a href={PHONE_HREF} className="visit-link">
                     {PHONE_NUMBER}
                   </a>
+                </span>
+              </li>
+              <li>
+                <span className="contact-icon">
+                  <ClockIcon className="icon-sm" />
+                </span>
+                <span>
+                  <span className="contact-label">Hours</span>
+                  {BUSINESS_HOURS.map((row) => (
+                    <span key={row.days} className="visit-note">
+                      {row.days}: {row.hours}
+                    </span>
+                  ))}
                 </span>
               </li>
             </ul>

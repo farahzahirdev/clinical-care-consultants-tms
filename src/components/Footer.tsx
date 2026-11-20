@@ -1,6 +1,7 @@
 import Image from "next/image";
 import {
   ADDRESS_LINES,
+  BUSINESS_HOURS,
   FAQ_SECTION_ID,
   FORM_SECTION_ID,
   LOGO_URL,
@@ -65,6 +66,11 @@ export default function Footer() {
                   {ADDRESS_LINES[1]}
                 </a>
               </li>
+              {BUSINESS_HOURS.map((row) => (
+                <li key={row.days}>
+                  {row.days}: {row.hours}
+                </li>
+              ))}
               <li>
                 <a href={WEBSITE_URL} target="_blank" rel="noopener noreferrer">
                   {WEBSITE_LABEL}
